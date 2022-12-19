@@ -32,17 +32,3 @@ class Dog:
     def dogWakeUp(self) -> None:
         self.sleep = False
         self.energy = 100
-
-dog = Dog("Jack")
-dog.running()
-dog.running()
-dog.running()
-dog.running()
-print(dog.isSleeping())
-dog.running()
-print(dog.isSleeping())
-dog.barks()
-dog.dogWakeUp()
-print(dog.isSleeping())
-dog.barks()
-
