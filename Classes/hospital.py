@@ -27,13 +27,4 @@ class Hospital:
         self.count_of_bed += 1
     
     def remove_bed(self) -> None:
-        self.count_of_bed -= 1
-
-    
-        
-    
-    
-                
-        
-    
-        
+        self.count_of_bed -= 1       
