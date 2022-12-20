@@ -45,11 +45,4 @@ class Helicopter:
                 self.countOfFuel = self.full
                 
         else:
-            print(f"You must refuel into (5,{self.countOfFuel})")
-helicopter = Helicopter(20)
-print(helicopter.get_amountOfFuel())
-helicopter.fly()
-print(helicopter.get_amountOfFuel())
-helicopter.refuel(30)    
-print(helicopter.get_amountOfFuel())
-helicopter.refuel(10)        
+            print(f"You must refuel into (5,{self.countOfFuel})")    
