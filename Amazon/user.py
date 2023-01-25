@@ -1,5 +1,4 @@
 from cart import ShoppingCart
-from product import Product
 
 class User:
     
@@ -10,20 +9,20 @@ class User:
         self.__money = 5000000
         self.__cart = ShoppingCart()
     
-    def get_name(self) -> str:
-        return self.__name
+    def get_name(self) -> None:
+        print(f"Name: {self.__name}")
     
-    def get_id(self) -> int:
-        return self.__id
+    def get_id(self) -> None:
+        print(f"Id: {self.__id}")
     
-    def get_email(self) -> str:
-        return self.__email
+    def get_email(self) -> None:
+         print(f"email: {self.__email}")
     
-    def get_cart(self) -> list:
-        return self.__cart.get_cart()
+    def get_cart(self) -> None:
+        print(f"Cart: {self.__cart.get_cart()}")
 
-    def get_money(self) -> int:
-        return self.__money       
+    def get_money(self) -> None:
+        print(f"Money: {self.__money}")       
     
     def add_money(self, money: int) -> None:
         self.__money += money
@@ -37,10 +36,13 @@ class User:
     def set_id(self, new_id: int) -> None:
         self.__id = new_id
     
-    def add_product(self, product: Product) -> None:
+    def add_product(self, product) -> None:
         self.__cart.add_product(product.name)    
     
-    def buy_product(self, product: Product) -> None:
+    def remove_product(self, product) -> None:
+        self.__cart.remove_product(product)
+
+    def buy_product(self, product) -> None:
         if product.name in self.__cart.get_cart():
             self.__money -= product.price
             self.__cart.remove_product(product)

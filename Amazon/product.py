@@ -5,14 +5,14 @@ class Product:
         self.price = price
         self.features = features
         
-    def get_name(self) -> str:
-        return self.name
+    def get_name(self) -> None:
+        print(self.name)
     
-    def get_price(self) -> int:
-        return self.price
+    def get_price(self) -> None:
+        print(self.price)
     
-    def get_features(self) -> str:
-        return self.features    
+    def get_features(self) -> None:
+        print(self.features)    
     
     def set_name(self, newname: str) -> None:
         self.name = newname
